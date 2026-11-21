@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  account: one
+  external_id: MyString
+  date: 2026-11-20
+  amount_cents: 1
+  merchant_name: MyString
+  description: MyString
+
+two:
+  account: two
+  external_id: MyString
+  date: 2026-11-20
+  amount_cents: 1
+  merchant_name: MyString
+  description: MyString

@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  external_id: MyString
+  institution: MyString
+  account_type: MyString
+  last_balance: 1
+  currency: MyString
+
+two:
+  user: two
+  external_id: MyString
+  institution: MyString
+  account_type: MyString
+  last_balance: 1
+  currency: MyString
