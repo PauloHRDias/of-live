@@ -5,6 +5,6 @@ class TransactionsChannelTest < ActionCable::Channel::TestCase
 
   test "subscribes to the transactions stream" do
     subscribe
-    assert_equal ["transactions"], subscription.streams
+    assert_equal [ "transactions" ], subscription.streams
   end
 end
