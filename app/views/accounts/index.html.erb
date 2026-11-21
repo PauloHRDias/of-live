@@ -1,0 +1,29 @@
+<h1 class="accounts-title">Contas</h1>
+
+<div class="accounts-list" data-accounts-list>
+  <% @accounts.each do |account| %>
+    <div class="account-card" data-account-id="<%= account.id %>">
+      <div class="account-head">
+        <h2 class="account-name"><%= account.institution.presence || "Conta" %></h2>
+        <p class="account-meta">
+          <% if account.account_type %><span><%= account.account_type %></span><% end %>
+          <span><%= account.currency %></span>
+        </p>
+      </div>
+
+      <div class="account-balance">
+        <%= money(account.last_balance) %>
+      </div>
+
+      <ul class="transactions">
+        <% account.transactions.order(id: :desc).first(5).each do |tx| %>
+          <li class="transaction-item">
+            <span class="tx-name"><%= tx.merchant_name.presence || tx.description.presence || "—" %></span>
+            <span class="tx-amount"><%= money(tx.amount_cents) %></span>
+            <span class="tx-date"><%= tx.date&.strftime("%d/%m") %></span>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+</div>
