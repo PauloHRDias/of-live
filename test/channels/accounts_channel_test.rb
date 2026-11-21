@@ -1,8 +1,10 @@
 require "test_helper"
 
 class AccountsChannelTest < ActionCable::Channel::TestCase
-  # test "subscribes" do
-  #   subscribe
-  #   assert subscription.confirmed?
-  # end
+  tests AccountsChannel
+
+  test "subscribes to the accounts stream" do
+    subscribe
+    assert_equal ["accounts"], subscription.streams
+  end
 end

@@ -1,11 +1,10 @@
-# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
+# Fixtures de Consents (external_id único por consentimento)
 one:
   user: one
-  external_id: MyString
-  scope: MyString
+  external_id: ext_consent_one
+  scope: personal_read_data_primary
 
 two:
   user: two
-  external_id: MyString
-  scope: MyString
+  external_id: ext_consent_two
+  scope: personal_read_data_primary

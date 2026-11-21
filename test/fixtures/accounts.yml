@@ -1,17 +1,16 @@
-# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
+# Fixtures de Accounts (external_id único por conta)
 one:
   user: one
-  external_id: MyString
-  institution: MyString
-  account_type: MyString
-  last_balance: 1
-  currency: MyString
+  external_id: ext_one
+  institution: Banco A
+  account_type: conta_corrente
+  last_balance: 1000
+  currency: BRL
 
 two:
   user: two
-  external_id: MyString
-  institution: MyString
-  account_type: MyString
-  last_balance: 1
-  currency: MyString
+  external_id: ext_two
+  institution: Banco B
+  account_type: conta_corrente
+  last_balance: 2500
+  currency: BRL
