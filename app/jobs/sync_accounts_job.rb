@@ -1,8 +1,3 @@
-# Sincroniza contas, saldos e extrato do Open Finance do usuário:
-#   - cria/atualiza Account (dados externos da conta)
-#   - atualiza Account#last_balance
-#   - importa novas Transaction (extrato)
-#   - notifica clientes conectados via Action Cable (accounts + transactions channels)
 class SyncAccountsJob < ApplicationJob
   def perform(user)
     client = OpenFinanceClient.new(token: user.open_finance_token)
